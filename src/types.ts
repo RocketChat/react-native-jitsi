@@ -1,13 +1,13 @@
-export interface JitsiUserInfo {
+export interface JitsiMeetUserInfo {
   displayName: string;
   avatar: string;
 }
 
-export interface JitsiConferenceOptions {
-  serverUrl: string;
-  userInfo: JitsiUserInfo;
+export interface JitsiMeetConferenceOptions {
+  url: string;
+  userInfo: JitsiMeetUserInfo;
 }
 
-export interface JitsiType {
-  launchJitsi: (options: JitsiConferenceOptions) => Promise<void>;
+export interface JitsiMeetType {
+  launchJitsiMeet: (options: JitsiMeetConferenceOptions) => Promise<void>;
 }
