@@ -6,7 +6,7 @@ class JitsiMeet: NSObject {
     
   var vc: JitsiMeetViewController?
     
-  @objc func launchJitsiMeet(_ options: NSDictionary, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) {
+  @objc func launch(_ options: NSDictionary, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) {
     DispatchQueue.main.async {
       let rootViewController = UIApplication.shared.delegate?.window??.rootViewController as! UINavigationController
       let _vc = JitsiMeetViewController()
@@ -19,10 +19,6 @@ class JitsiMeet: NSObject {
         
         self.vc = _vc
     }
-  }
-
-  @objc func launch(_ options: NSDictionary, resolver resolve: @escaping RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) {
-    launchJitsiMeet(options, resolver: resolve, rejecter: reject)
   }
   
   @objc

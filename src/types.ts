@@ -9,5 +9,5 @@ export interface JitsiMeetConferenceOptions {
 }
 
 export interface JitsiMeetType {
-  launchJitsiMeet: (options: JitsiMeetConferenceOptions) => Promise<void>;
+  launch: (options: JitsiMeetConferenceOptions) => Promise<void>;
 }
