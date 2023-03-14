@@ -23,6 +23,8 @@ struct JitsiMeetUtil {
         
         builder.userInfo = conferenceUserInfo
       }
+
+      builder.setFeatureFlag("prejoinpage.enabled", withBoolean: false)
       
     }
   }
